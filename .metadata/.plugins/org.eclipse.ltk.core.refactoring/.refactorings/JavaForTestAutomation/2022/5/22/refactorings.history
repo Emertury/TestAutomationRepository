@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.tem.foundations.Java02Variables&apos; to &apos;Java03Variables&apos;&#x0D;&#x0A;- Original project: &apos;JavaForTestAutomation&apos;&#x0D;&#x0A;- Original element: &apos;com.tem.foundations.Java02Variables&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tem.foundations.Java03Variables&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Java02Variables&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.tem.foundations{Java02Variables.java[Java02Variables" matchStrategy="1" name="Java03Variables" qualified="false" references="true" similarDeclarations="false" stamp="1653495948593" textual="false" version="1.0"/>
+</session>

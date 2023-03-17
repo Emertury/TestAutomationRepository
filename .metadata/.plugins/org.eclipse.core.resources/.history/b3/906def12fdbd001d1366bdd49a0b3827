@@ -1,0 +1,50 @@
+package com.tem.foundations;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+
+/**
+ * @author CB815KC
+ * @project JavaDemo
+ * @date 08 March 2023
+ */
+
+public class GoogleSearchtest {
+
+	private WebDriver driver;
+
+	@Before
+	public void Setup() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\CB815KC\\eclipse-workspace\\JavaForTestAutomation\\src\\test\\resources\\drivers\\chromedriver.exe"); // Logs
+		/*
+		 * Initialize browser
+		 */
+		driver = new ChromeDriver();
+
+		/*
+		 * Open IFM NetPay
+		 */
+
+		driver.get("https:www.google.com");
+
+		// button.click()
+		// Maximize window
+		driver.manage().window().maximize();
+
+	}
+
+	@Test
+	public void testGoogle() {
+
+		WebElement searchbox = driver.findElement(By.className("q"));
+		searchbox.clear();
+		searchbox.sendKeys("Test University");
+
+	}
+
+}

@@ -1,0 +1,58 @@
+package com.tem.foundations;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+
+/**
+ * @author CB815KC
+ * @project JavaDemo
+ * @date 08 March 2023
+ */
+
+public class GoogleSearchtest {
+
+	private WebDriver driver;
+	By registerLocator = By.linkText("REGISTER");
+	By registerpageLocator = By.xpath("//img [@src='images/mast_register.gif']");
+	By registeruserLocator = By.id("email");
+	By pswuserLocator = By.name("password");
+	By confirmuserLocator = By.cssSelector("input[name='confirmPassword']");
+	By BtnuserregiterLocator = By.cssSelector("input[type='submit']");
+
+	@Before
+	public void Setup() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\CB815KC\\eclipse-workspace\\JavaForTestAutomation\\src\\test\\resources\\drivers\\chromedriver.exe"); // Logs
+
+		// Initialize browser
+		driver = new ChromeDriver();
+		// * Open URL
+		driver.get("https://demo.guru99.com/test/newtours/");
+		// Maximize window
+		driver.manage().window().maximize();
+	}
+
+	@After
+	public void Teardown() {
+		// driver.quit();
+	}
+
+	@Test
+	public void RegisterUser() {
+
+		driver.findElement(registerLocator).click();
+		if (driver.findElement(registerpageLocator).isDisplayed());
+		driver.findElement(registeruserLocator).sendKeys("usertest1");
+		driver.findElement(pswuserLocator).sendKeys("Em123456");
+		driver.findElement(confirmuserLocator).sendKeys("Em123456");
+		driver.findElement(BtnuserregiterLocator).click();
+  
+	}
+}

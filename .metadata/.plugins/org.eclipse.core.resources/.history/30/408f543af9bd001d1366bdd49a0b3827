@@ -1,0 +1,53 @@
+package com.tem.foundations;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/**
+ * @author CB815KC
+ * @project JavaDemo
+ * @date 16 May 2021
+ */
+
+public class HelloWorld {
+
+	/**
+	 * 
+	 * @param args
+	 */
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\CB815KC\\eclipse-workspace\\JavaForTestAutomation\\src\\test\\resources\\drivers\\chromedriver.exe"); // Logs
+		/*
+		 * Initialize browser
+		 */
+		WebDriver driver = new ChromeDriver();
+				
+		/*
+		 * Open IFM NetPay
+		 */
+
+		driver.get("https:www.google.com");
+
+		// button.click()
+
+		// button = driver.findElement(By.xpath, '//button[@class="button
+		// [login-button]"]')
+
+		// user = "Emersson.Manchola.Camacho@ey.com";
+		// password = open("psw.txt").readline().strip();
+
+		// input_login = driver.findElement(By.xpath, '//input[@name="button
+		// [login-button]"]')
+
+		// Maximize window
+
+		driver.manage().window().maximize();
+		
+		
+		
+	
+			
+	}
+}

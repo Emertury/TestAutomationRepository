@@ -1,0 +1,61 @@
+package com.tem.foundations;
+
+//import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class IFMAutomatedTest {
+
+	private WebDriver driver;
+	By registerbtnLocator = By.className("login-button");
+	By registeruserLocator = By.className("q");
+	By loginbtnLocator = By.cssSelector("input[id='idSIButton9']");
+	WebElement email;
+	//By registeruserLocator = By.className("form-control ltr_override inputext-input text-box ext-text-box");
+
+	@Before
+	public void setUp() throws Exception {
+
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\CB815KC\\eclipse-workspace\\JavaForTestAutomation\\src\\test\\resources\\drivers\\chromedriver.exe"); // Logs
+		driver = new ChromeDriver();
+
+		//System.setProperty("webdriver.edge.driver","C:\\Users\\CB815KC\\eclipse-workspace\\JavaForTestAutomation\\src\\test\\resources\\drivers\\geckodriver.exe"); // Logs
+		//WebDriver driver = new EdgeDriver();
+
+		
+		driver.get("https://www.google.com");
+		driver.manage().window().maximize();
+		driver.findElement(registerbtnLocator).click();
+		
+
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		driver.quit();
+	}
+
+	@Test
+	public void Logintest() {
+		//driver.findElement(registerbtnLocator).click();
+		//driver.getTitle();
+		System.out.print(driver.getTitle());
+		// Thread.sleep(2000);
+	//	if (driver.findElement(registerbtnLocator).isDisplayed()) {
+			driver.findElement(registeruserLocator).sendKeys("test automation university");
+			//email = driver.findElement(By.name("loginfmt"));
+			//driver.findElement(loginbtnLocator).click();
+			
+//		} else {
+			System.out.print("Log in user page was not found");
+		}
+	}
+
+
