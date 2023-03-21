@@ -37,6 +37,7 @@ public class GoogleSearchtest {
 
 	By HotelLocator = By.linkText("Hotels");
 	By viewhotelsLocator = By.xpath("//img [@src='images/mast_construction.gif'] ");
+	By BackhomeLocator = By.xpath("//img [@src='images/home.gif'] ");
 
 	By Signoffuser = By.linkText("SIGN-OFF");
 
@@ -95,7 +96,7 @@ public class GoogleSearchtest {
 
 		driver.findElement(HotelLocator).click();
 		By viewhotelsLocator = By.xpath("//img [@src='images/mast_construction.gif']");
-		if (driver.findElement(HotelLocator).isDisplayed());
+		driver.findElement(BackhomeLocator).click();
 
 	}
 
